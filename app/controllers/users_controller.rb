@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
-    redirect_to user_path(@user.id) # if user_params[:admin] == 0
+    redirect_to user_path(@user.id) #if user_params[:admin] == 0
     
     # redirect_to admin_signup if user_params[:admin] == 1
   end
