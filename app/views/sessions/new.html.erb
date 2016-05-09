@@ -1,5 +1,5 @@
 <p>Select your name</p>
 <%= form_tag signin_path do %>
-<%= collection_select :user, :user_id, User.all, :id, :name, prompt: true %>
+<%= collection_select :user, :id, User.all, :id, :name, prompt: true %>
 <%= submit_tag "Sign In" %>
 <% end %>
